@@ -1,13 +1,21 @@
 <template>
-    <v-container>
-      <h1> A MAIS GOSTOSA DO MUNDO!!! </h1>
-    </v-container>
+    <v-app>
+        <AppToolbar/> 
+        <div class="mt-15">
+          aaaaaaaaa
+          <v-img src="../assets/logo07.png"></v-img>
+        </div>
+    </v-app>
   </template>
   
   <script>
+    import AppToolbar from '../views/AppToolbar'
     import produtoService from '@/services/produtoService'
     export default {
       name: 'HelloWorld',
+      components: {
+         AppToolbar
+      },
   
       data: () => ({
         data: {
