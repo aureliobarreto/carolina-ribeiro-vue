@@ -1,5 +1,5 @@
 <template>
-    <div id="inspire">
+    <div id="inspire" class="global">
 
         <v-navigation-drawer v-if="drawer" fixed app v-model="drawer" width="260">
             <v-img max-width="250" src="../assets/logo03.svg"></v-img>
@@ -12,6 +12,7 @@
                 <v-spacer/>         
                 <v-img class="hidden-sm-and-down" max-width="450" src="../assets/logo02.svg"></v-img>
                 <v-spacer></v-spacer>
+                <div class="mr-4">seja um franqueado</div>
                 <div><Login/></div>
                 <v-btn icon >
                     <v-icon>shopping_bag</v-icon>
@@ -35,3 +36,8 @@ import Login from '../components/LoginLayout'
         }
     }
 </script>
+<style>
+ .global{
+  font-family: Rajdhani;
+ }
+ </style>

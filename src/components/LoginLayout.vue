@@ -1,44 +1,55 @@
 <template>
-        
-        <v-dialog max-width="500px" v-model="dialog">
+        <v-layout align-end>
+        <v-dialog max-width="500px" v-model="dialog" class="overflow-hidden">
             <template v-slot:activator="{ on, attrs }">
-                <v-btn icon v-bind="attrs" v-on="on">
-                    <v-icon>person</v-icon>
-                </v-btn>
                 
+                <div v-bind="attrs" v-on="on" style="font-family:'Rajdhani';"> login</div>
+            
             </template>
-            <v-card>
-                <v-card-title>Bem-vindo(a) à Carolina Ribeiro</v-card-title>
+           
+            
+            <v-card flat class="overflow-hidden" align="center">
+                <v-card-title>Bem-vindo(a) a Carolina Ribeiro</v-card-title>
                 <v-form>
-                    
-                        <v-text-field outlined class="ma-3 mt-5"  label="usuário"></v-text-field>
-                        <v-text-field outlined class="ma-3" type="password" label="senha"></v-text-field>
-                        <v-checkbox label="Manter conectado" class="ml-2"></v-checkbox>
-                        <v-card-actions>
-                           
+                        <v-card flat class="ma-5 mb-0">
+                            <v-text-field outlined class="mt-6"  label="usuário"></v-text-field>
+                            <v-text-field outlined class="mb-0"  type="password" label="senha"></v-text-field>
+                            <v-checkbox class="mt-0 mb-0" label="Manter conectado" ></v-checkbox>
+                        </v-card>
+                        <v-card-actions class="ma-5 mt-0">                           
                             <v-spacer/>
-                            <v-row justify-content-center>
-                                <v-col sm="12">
-                                <v-btn color="primary" width="420">Login</v-btn>
+                            <v-row >
+                                <v-col sm="12" >
+                                <v-btn color="primary" width="450">Login</v-btn>
                                 </v-col>
                                 <v-divider/>
                                 <v-layout justify-center> -------- ou --------</v-layout>
                                 
                                 <v-col sm="12">
-                                <v-btn class="ml-2" width="420" @click="dialog = false">Continuar com o Google</v-btn>
+
+                                <v-btn  color="#FF4B26" width="450" class="lighten-5 white--text" @click="dialog = false">
+                                    <v-img max-width="23" class="mr-1" src="../assets/google.png"></v-img>
+                                    Continuar com o Google </v-btn>
                                 </v-col>
                                 <v-col sm="12">
-                                <v-btn class="ml-2" width="420" @click="dialog = false">Continuar com o Facebook</v-btn>
+                                <v-btn color="#3A589B" class="white--text" width="450" @click="dialog = false">
+                                    <v-img max-width="30" class="mr-1" src="../assets/facebook.png"></v-img>
+                                    Continuar com o Facebook</v-btn>
                                 </v-col>
-                                <span> Esqueci minha senha</span>
+                                <v-col sm="12">
+                                <span> Não tem uma conta? <b @click="dialog = false">Cadastre-se</b></span> 
+                                </v-col>
                             </v-row>
                         </v-card-actions>
                     
                 </v-form>
             </v-card>
+            <v-card color="grey" align="center" class="lighten-1">
+                Esqueci minha senha <b>recuperar senha</b>
+            </v-card>
         
     </v-dialog>
-
+</v-layout>
     
 </template>
 
@@ -56,3 +67,6 @@ export default {
     }
 }
 </script>
+<style>
+
+</style>
