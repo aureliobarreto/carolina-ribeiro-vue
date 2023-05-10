@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import home from '@/views/Home'
-import login from '@/components/LoginLayout'
+import home from '../views/Home.vue'
+import login from '../components/LoginLayout'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
